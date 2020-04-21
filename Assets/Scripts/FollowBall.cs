@@ -6,6 +6,7 @@ public class FollowBall : MonoBehaviour {
 
     public Transform ball;
     public float speed;
+    public float speedtest = 0.4f;
     static public SceneChanger levelData;
     static float level;
 

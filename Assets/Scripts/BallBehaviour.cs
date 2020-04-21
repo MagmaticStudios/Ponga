@@ -65,11 +65,17 @@ public class BallBehaviour : MonoBehaviour {
         {
             if (SceneChanger.gameplaySetting == 1)
             {
-                Ballrb.AddForce(new Vector2(-150, 0));
+                int ramdonNumber = Random.Range(-5, -5);
+                int verticalSpeed = ramdonNumber * 50;
+                Debug.Log(verticalSpeed + " " + ramdonNumber);
+                Ballrb.AddForce(new Vector2(-150, verticalSpeed));
             }
             else
             {
-                Ballrb.AddForce(new Vector2(150, 0));
+                int ramdonNumber = Random.Range(-5, 5);
+                int verticalSpeed = ramdonNumber * 50;
+                Debug.Log(verticalSpeed + " " + ramdonNumber);
+                Ballrb.AddForce(new Vector2(150, verticalSpeed));
             }
                 
         }
@@ -77,13 +83,17 @@ public class BallBehaviour : MonoBehaviour {
         {
             if (SceneChanger.gameplaySetting == 1)
             {
+                  
                 Ballrb.AddForce(new Vector2(150, 0));
             }
             else
             {
+
                 Ballrb.AddForce(new Vector2(-150, 0));
             }
         }
 
     }
+
+
 }
